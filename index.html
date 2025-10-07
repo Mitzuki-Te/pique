@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana del Pique 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="header-content">
+            <h1>🥩 Semana del Pique 2025</h1>
+            <p>Del 10 al 17 de octubre – La Paz, Bolivia</p>
+            <button class="cta">🍽️ Reserva tu lugar</button>
+        </div>
+    </header>
+
+    <!-- Descripción -->
+    <section class="descripcion">
+        <h2>📖 Celebra el sabor boliviano</h2>
+        <p>Disfruta el auténtico pique macho en una semana llena de tradición, música y sabor. 
+           Vive una experiencia gastronómica única en La Paz.</p>
+        <img src="pique.jpg" alt="Pique Macho" class="imagen-evento">
+    </section>
+
+    <!-- Detalles del evento -->
+    <section class="detalles">
+        <h2>📅 Detalles del Evento</h2>
+        <ul>
+            <li><strong>Fecha:</strong> 10 al 17 de octubre 2025</li>
+            <li><strong>Lugar:</strong> Plaza Mayor, La Paz, Bolivia</li>
+            <li><strong>Actividades:</strong> Concurso del pique, música en vivo, degustaciones</li>
+        </ul>
+        <button class="btn-mapa">🗺️ Ver ubicación</button>
+    </section>
+
+    <!-- Galería con carrusel -->
+    <section class="galeria">
+        <h2>📸 Galería del Evento</h2>
+        <div class="carrusel">
+            <!-- Botones de flecha -->
+            <button class="carrusel-btn prev">❮</button>
+
+            <div class="carrusel-track">
+                <img src="foto1.png" alt="Pique 1">
+                <img src="foto2.png" alt="Pique 2">
+                <img src="foto3.png" alt="Pique 3">
+                <img src="foto4.png" alt="Pique 4">
+            </div>
+
+            <button class="carrusel-btn next">❯</button>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="testimonios">
+        <h2>💬 Opiniones</h2>
+        <blockquote>“El mejor pique que he probado. Ambiente espectacular.” – Juan P.</blockquote>
+        <blockquote>“Una experiencia gastronómica única. Volveré sin dudar.” – María R.</blockquote>
+    </section>
+
+    <!-- Formulario -->
+    <section class="formulario">
+        <h2>📝 Reserva tu lugar</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="tel" placeholder="Teléfono" required>
+            <button type="submit">✅ Confirmar asistencia</button>
+        </form>
+    </section>
+
+    <!-- Historia -->
+    <section class="historia">
+        <h2>📚 Historia y Participantes</h2>
+        <p>El pique macho es uno de los platos más representativos de Bolivia. 
+           En esta edición, reconocidos chefs y restaurantes de La Paz participarán 
+           para ofrecer su mejor versión.</p>
+    </section>
+
+    <!-- Contador -->
+    <section class="contador">
+        <h2>🕒 Faltan pocos días</h2>
+        <div class="contador-box">
+            ⏰ Faltan <span>05 días</span> : <span>12 horas</span> : <span>45 minutos</span>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Síguenos: 
+            <a href="#">📷 Instagram</a> | 
+            <a href="#">📘 Facebook</a> | 
+            <a href="#">🎵 TikTok</a>
+        </p>
+        <p>📞 semanadelpique@evento.bo | +591 777 55555</p>
+        <p>© 2025 Semana del Pique - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- 🎯 Script del carrusel -->
+    <script>
+    const track = document.querySelector('.carrusel-track');
+    const btnPrev = document.querySelector('.carrusel-btn.prev');
+    const btnNext = document.querySelector('.carrusel-btn.next');
+    let index = 0;
+
+    btnNext.addEventListener('click', () => {
+        const total = track.children.length;
+        index = (index + 1) % total;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    btnPrev.addEventListener('click', () => {
+        const total = track.children.length;
+        index = (index - 1 + total) % total;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    });
+    </script>
+
+</body>
+</html>
+
